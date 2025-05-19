@@ -71,3 +71,16 @@ However if you simply send the *bundle.html.gz* file to a client/browser they wi
 `Content-Type: text/html`
 
 `Content-Encoding: gzip`
+
+## Configuring the environment
+
+.env.development has to be create and updated.
+
+```
+API_ROOT=http://10.199.67.55/api
+NODE_ENV=development
+```
+
+API_ROOT has to be defined to points to IP address of the MicroOcpp API something like 10.199.67.55 or microocpp.io. In case of local running in docker, IP is enough good to be left localhost, but in case of Azure Virtual Machine localhost is not well defined and it has to be a visible local IP address of API like API_ROOT=http://10.199.67.55/api. 
+
+NODE_ENV has to be development. In case of production then it is in .env.production.
